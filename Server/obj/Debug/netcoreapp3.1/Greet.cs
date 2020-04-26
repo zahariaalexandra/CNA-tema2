@@ -25,14 +25,14 @@ namespace Server {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IhwKDEhlbGxvUmVxdWVzdBIM",
-            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCTI9",
-            "CgdHcmVldGVyEjIKCFNheUhlbGxvEhMuZ3JlZXQuSGVsbG9SZXF1ZXN0GhEu",
-            "Z3JlZXQuSGVsbG9SZXBseUIJqgIGU2VydmVyYgZwcm90bzM="));
+            "CgRkYXRlGAEgASgJIhoKCkhlbGxvUmVwbHkSDAoEc2lnbhgBIAEoCTI9CgdH",
+            "cmVldGVyEjIKCFNheUhlbGxvEhMuZ3JlZXQuSGVsbG9SZXF1ZXN0GhEuZ3Jl",
+            "ZXQuSGVsbG9SZXBseUIJqgIGU2VydmVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Server.HelloRequest), global::Server.HelloRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Server.HelloReply), global::Server.HelloReply.Parser, new[]{ "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Server.HelloRequest), global::Server.HelloRequest.Parser, new[]{ "Date" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Server.HelloReply), global::Server.HelloReply.Parser, new[]{ "Sign" }, null, null, null, null)
           }));
     }
     #endregion
@@ -67,7 +67,7 @@ namespace Server {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public HelloRequest(HelloRequest other) : this() {
-      name_ = other.name_;
+      date_ = other.date_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -76,14 +76,14 @@ namespace Server {
       return new HelloRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
+    /// <summary>Field number for the "date" field.</summary>
+    public const int DateFieldNumber = 1;
+    private string date_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
+    public string Date {
+      get { return date_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        date_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -100,14 +100,14 @@ namespace Server {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
+      if (Date != other.Date) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Date.Length != 0) hash ^= Date.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -121,9 +121,9 @@ namespace Server {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
+      if (Date.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(Date);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -133,8 +133,8 @@ namespace Server {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (Date.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Date);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -147,8 +147,8 @@ namespace Server {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.Date.Length != 0) {
+        Date = other.Date;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -162,7 +162,7 @@ namespace Server {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            Date = input.ReadString();
             break;
           }
         }
@@ -199,7 +199,7 @@ namespace Server {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public HelloReply(HelloReply other) : this() {
-      message_ = other.message_;
+      sign_ = other.sign_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -208,14 +208,14 @@ namespace Server {
       return new HelloReply(this);
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    /// <summary>Field number for the "sign" field.</summary>
+    public const int SignFieldNumber = 1;
+    private string sign_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Message {
-      get { return message_; }
+    public string Sign {
+      get { return sign_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -232,14 +232,14 @@ namespace Server {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
+      if (Sign != other.Sign) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (Sign.Length != 0) hash ^= Sign.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -253,9 +253,9 @@ namespace Server {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Message.Length != 0) {
+      if (Sign.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteString(Sign);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -265,8 +265,8 @@ namespace Server {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (Sign.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sign);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -279,8 +279,8 @@ namespace Server {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.Sign.Length != 0) {
+        Sign = other.Sign;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,7 +294,7 @@ namespace Server {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Message = input.ReadString();
+            Sign = input.ReadString();
             break;
           }
         }
