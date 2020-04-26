@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "scmp60miriHt6kA/Rwjk6GcBdL/ZRa25zTTINtUg7U9nmBrsi7NwasOKnE9tlWG0eVZFFS2pAh8ZeN3CGAp4vw==",
+  "dgSpecHash": "CDK14ubPVE1MziPHufv6HmaV/Dx5Tvwuh8gR9qOyQfGJKxY73lLspxmCo+Xe9tP59O7wr0Uo2P5MjDD7QHPrWA==",
   "success": true,
-  "projectFilePath": "D:\\Facultate\\tema2\\Server\\Server.csproj",
+  "projectFilePath": "D:\\Facultate\\CNA-tema2\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aaale\\.nuget\\packages\\google.protobuf\\3.11.2\\google.protobuf.3.11.2.nupkg.sha512",
     "C:\\Users\\aaale\\.nuget\\packages\\grpc.aspnetcore\\2.27.0\\grpc.aspnetcore.2.27.0.nupkg.sha512",

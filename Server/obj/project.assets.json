@@ -635,11 +635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Facultate\\tema2\\Server\\Server.csproj",
+      "projectUniqueName": "D:\\Facultate\\CNA-tema2\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\Facultate\\tema2\\Server\\Server.csproj",
+      "projectPath": "D:\\Facultate\\CNA-tema2\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\aaale\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultate\\tema2\\Server\\obj\\",
+      "outputPath": "D:\\Facultate\\CNA-tema2\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
